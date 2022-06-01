@@ -1,1 +1,1 @@
-console.log("Working!");
+document.querySelector("form").addEventListener("submit",(async function(e){e.preventDefault();const t=this.querySelector("#data").value;if(!t)return;const n=await(await fetch(`/api/${t}`)).json();document.querySelector("#age").innerText=n.age,document.querySelector("#birthName").innerText=n.birthName,document.querySelector("#birthLocation").innerText=n.birthLocation}));
